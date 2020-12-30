@@ -1,5 +1,5 @@
-# DevLogTrace
-일일 커밋(Daily Commit) 개발 로그
+# TIL(Today I Learned)
+하루 하루 한 줄이라도 공부한 부분을 끄적이는 공간
 
 ### 다짐
 > **GitHub, one day one commit**
