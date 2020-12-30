@@ -44,7 +44,7 @@ arr.reduce(callback[, initialValue])
     ```
 
 
-
+   <br/>
 
 - 배열들을 하나의 배열로 펼칠 때,
 
@@ -57,7 +57,7 @@ arr.reduce(callback[, initialValue])
    console.log(flatArray); // [1, 2, 3, 7, 8, 9, 4, 5, 6]
    ```
    
-
+   <br/>
 
 - 특정 키의 빈도를 계산하는 객체를 만들 때,
 
@@ -77,7 +77,7 @@ arr.reduce(callback[, initialValue])
    // {23: 1, 28: 2, 34: 1}
    ```
 
-   
+   <br/>
 
 - Object Key - Value 역전
    
@@ -109,12 +109,12 @@ arr.reduce(callback[, initialValue])
    ```
 
    위 예제는 Comma Operator로 간략하게 표현할 수 있는데 해당 개념도 공부해보자.
-
+   
    ▶ `(acc, k) => (acc[cities[k]] = [...(acc[cities[k]] || []), k], acc)`
 
+   <br/>
 
-
-- array of object 인덱싱
+- Array of object 인덱싱
 
    ```javascript
    // 위의 users
@@ -136,6 +136,35 @@ arr.reduce(callback[, initialValue])
    
    위 코드를 처음 봤을 때, *'이렇게도 사용할 수 있구나!'* 감탄했다. API 데이터를 가져와 가공해서 사용하거나 테이블 데이터를 인덱싱할 때 유용하게 사용할 수 있는 예시이다.
    
+   <br/>
+
+- 비동기 프로그래밍
+
+   > 응용은 무한하다.
+
+   `reduce()`는 비동기 프로그래밍에서도 유용하게 사용할 수 있다. 예제를 살펴보자.
+
+   ```javascript
+   const promiseFactory = (time) => {
+      return new Promise((resolve, reject) => {
+         console.log(time); 
+         setTimeout(resolve, time);
+      });
+   };
+
+   [1000, 2000, 3000, 4000].reduce((acc, cur) => {
+      return acc.then(() => promiseFactory(cur));
+   }, Promise.resolve());
+   // 1000
+   // 2000 (1초)
+   // 3000 (2초)
+   // 4000 (3초)
+   ```
+
+   순차적인 비동기적 액션이 요구될 경우, 위와 같이 프로미스와 결합하여 순차적 실행을 보장받을 수 있다. 코드를 분석해보면, 초기값을 `Promise.resolve()` 지정하고 `return` 된 프로미스에 `then()`을 붙여 다음 누적값으로 넘길 수 있음을 알 수 있다.
+   
+   
+
 <br/>
 
 #### ★ **응용력 필수!**
