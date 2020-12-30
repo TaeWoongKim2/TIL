@@ -13,24 +13,37 @@ console.log(newArr); // [1, 4, 9]
 
 <br/>
 
+#### ★ 매개변수
+
+```javascript
+arr.map(callback(currentValue[, index[, array]])[, thisArg])
+```
+
+1. **currentValue** - 처리할 현재 요소.
+2. **index** - 처리할 현재 요소의 인덱스.
+3. **array** - `map()`을 호출한 배열.
+4. **thisArg** - `callback`을 실행할 때, `this`로 사용되는 값.
+
+<br/>
+
 #### ★ 사용 예제
 
-1. 온도에 대해 섭씨 ↔ 화씨로 바꾸기 등, Array item 값을 변경할 때,
+- 온도에 대해 섭씨 ↔ 화씨로 바꾸기 등, Array item 값을 변경할 때,
 
-   ```javascript
-   const celsius = [-15, -5, 0, 10, 16, 20, 24, 32]
-   
-   const fahrenheit = celsius.map(c => c * 1.8 + 32);
-   // [5, 23, 32, 50, 60.8, 68, 75.2, 89.6]
-   
-   const temperture = fahrenheit.map(f => Math.round((f - 32) / 1.8));
-   // [-15, -5, 0, 10, 16, 20, 24, 32]
-   ```
+    ```javascript
+    const celsius = [-15, -5, 0, 10, 16, 20, 24, 32]
 
-   
+    const fahrenheit = celsius.map(c => c * 1.8 + 32);
+    // [5, 23, 32, 50, 60.8, 68, 75.2, 89.6]
+
+    const temperture = fahrenheit.map(f => Math.round((f - 32) / 1.8));
+    // [-15, -5, 0, 10, 16, 20, 24, 32]
+    ```
 
 
-2. 배열 안의 각각의 item에서 특정 키로 유일한 값들을 뽑아낼 때,
+
+
+- 배열 안의 각각의 item에서 특정 키로 유일한 값들을 뽑아낼 때,
 
    ```javascript
    const users = [
@@ -47,7 +60,7 @@ console.log(newArr); // [1, 4, 9]
    
    
    
-3. 객체를 URL 쿼리 스트링으로 인코딩할 때,
+- 객체를 URL 쿼리 스트링으로 인코딩할 때,
 
    ```javascript
    function getURIQuery(paramObject) {
@@ -62,7 +75,7 @@ console.log(newArr); // [1, 4, 9]
 
    
 
-4. 배열을 순회할 때, (기본)
+- 배열을 순회할 때, (기본)
 
    ```javascript
    function readUsers(users) {
@@ -86,7 +99,7 @@ console.log(newArr); // [1, 4, 9]
    97 KANG 28 admin"*/
    ```
 
-<br/>   
+<br/>
 
 #### ★ **map() → reduce()**
 
