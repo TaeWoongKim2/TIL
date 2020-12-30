@@ -1,6 +1,6 @@
-## Array.prototype.**reduce**()
+## Array.prototype.reduce()
 
-``reduce()` 메서드는 대상 배열 내의 모든 요소에 대해 주어진 리듀서(reducer) 함수를 실행하고, <u>**결과값으로 새로운 배열을 반환**</u>한다.
+`reduce()` 메서드는 대상 배열 내의 모든 요소에 대해 주어진 리듀서(reducer) 함수를 실행하고, <u>**결과값으로 새로운 배열을 반환**</u>한다.
 
 ```javascript
 const array1 = [1, 2, 3, 4];
@@ -110,9 +110,8 @@ arr.reduce(callback[, initialValue])
 
    위 예제는 Comma Operator로 간략하게 표현할 수 있는데 해당 개념도 공부해보자.
 
-   `(acc, k) => (acc[cities[k]] = [...(acc[cities[k]] || []), k], acc)`
+   ▶ `(acc, k) => (acc[cities[k]] = [...(acc[cities[k]] || []), k], acc)`
 
-   `reduce()`는 객체를 다룰 때, 유용하게 사용되는 것 같다. 
 
 
 - array of object 인덱싱
@@ -144,3 +143,10 @@ arr.reduce(callback[, initialValue])
 > reduce() 메서드는 활용도가 높기 때문에 많이 예제 코드들을 경험해보자!
 
 `reduce()` 메서드는 엄청 파워풀한 녀석이다. 모든 함수형 메서드는 `reduce()`로 구현할 수 있다는 점과 `map() ` 메서드보다 속도가 빠르다고 하는데, 이에 대한 비교 자료는 찾아볼 필요가 있다.
+
+
+<br/>
+
+#### ★ 출처
+
+- [Eleven Ways To Learn Javascript Array Iteration Effectively - ZeptoBook](https://www.zeptobook.com/eleven-ways-to-learn-javascript-array-iteration-effectively/)
