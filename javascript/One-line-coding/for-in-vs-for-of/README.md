@@ -70,3 +70,10 @@ for (var value of iterable) {
 
 > 차라리 리듀스를 쓰면 어떨까?
 
+<br/>
+
+#### Reference Link
+
+- [자바스크립트 반복문 정리](https://jsdev.kr/t/for-in-vs-for-of/2938/3)
+
+- [Web Tools Weekly (mailchi.mp)](https://mailchi.mp/webtoolsweekly/web-tools-230?e=b2c0f00eca)
