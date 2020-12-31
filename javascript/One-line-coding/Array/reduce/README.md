@@ -163,7 +163,27 @@ arr.reduce(callback[, initialValue])
 
    순차적인 비동기적 액션이 요구될 경우, 위와 같이 프로미스와 결합하여 순차적 실행을 보장받을 수 있다. 코드를 분석해보면, 초기값을 `Promise.resolve()` 지정하고 `return` 된 프로미스에 `then()`을 붙여 다음 누적값으로 넘길 수 있음을 알 수 있다.
    
+
+- 비동기 프로그래밍
+
+   > 응용은 무한하다.
+
+   `reduce()`는 `filter() + map()` 결합된 형태에 대해 성능을 더욱 높일 수 있다. 하지만, 리팩토링할 경우 가동성이 더 좋을수도? 나쁠수도? 성능에 큰 이슈가 없을 경우 가독성이 더 좋은 코드가 좋을 것 같다.
+
+   ```javascript
+   const evenFilter =
+      (arr) => arr.filter(num => num % 2 === 0).map(num => num * 10);
+
+    const evenReducer = (arr = []) => {
+      return arr.reduce((acc, num) => {
+        if(num % 2 === 0) acc.push(num * 10);
+        return acc;
+      }, []);
+    }
+   ```
    
+   위의 예제의 경우, `reduce`는 대상 배열을 1회 순회하지만, `filter + map`의 경우 2회 순회한다. **filter된 데이터가 많으면 많을수록 성능이 떨어진다**. 테스트 결과도 1000,000번 런타임이 3배 넘게 차이가 난 경우도 존재했다. 성능이 필수조건인 경우 reduce를 적극 활용해야 한다.
+
 
 <br/>
 
