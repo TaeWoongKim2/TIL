@@ -199,3 +199,5 @@ arr.reduce(callback[, initialValue])
 #### ★ 출처
 
 - [Eleven Ways To Learn Javascript Array Iteration Effectively - ZeptoBook](https://www.zeptobook.com/eleven-ways-to-learn-javascript-array-iteration-effectively/)
+
+- [reduce를 쓰면서 유용했던 것 몇가지 정리 — Steemit](https://steemit.com/javascript/@rouka/reduce)
