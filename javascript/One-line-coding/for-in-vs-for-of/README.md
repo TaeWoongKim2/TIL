@@ -64,7 +64,7 @@ for (var value of iterable) {
 
 <br/>
 
-[Web Tools Weekly (mailchi.mp)](https://mailchi.mp/webtoolsweekly/web-tools-230?e=b2c0f00eca) 해당 자료에서도 for ...in 사용 시 주의가 필요하다고 하며, ES6를 쓴다면 for ...in을 사용을 지양할 필요가 있다. 성능면에서도 이점이 없다는 이유도 존재한다.
+[Web Tools Weekly (mailchi.mp)](https://mailchi.mp/webtoolsweekly/web-tools-230?e=b2c0f00eca) 해당 자료에서도 for ...in 사용 시 주의가 필요하다고 하며, ES6를 쓴다면 for ...in을 사용을 지양할 필요가 있다. 성능면에서도 이점이 없다는 것도 기억하자.
 
 <br/>
 
