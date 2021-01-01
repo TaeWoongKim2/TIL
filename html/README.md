@@ -73,7 +73,7 @@ DOM 이벤트는 다양하다. 아래의 이벤트들은 개발하면서 많이 
 </html>
 ```
 
-![HTML%206ade659e523f4c31b83724521fe92474/Untitled.png](eventflow1.png)
+<img src="./eventflow1.png" width=360 align=left>
 
 ### 버블링(Bubble phase) - propagate down
 
