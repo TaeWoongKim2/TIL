@@ -1,0 +1,78 @@
+
+#footerbar {
+  position: fixed;
+  bottom: -500px;
+  width: 100%;
+  height: 500px;
+  background: #042331;
+  transition: all 0.5s ease;
+}
+#footerbar header {
+  font-size: 22px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #063146;
+  user-select: none;
+}
+#footerbar ul a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.4s;
+}
+ul li:hover a {
+  padding-left: 50px;
+}
+#footerbar ul a i {
+  margin-right: 16px;
+}
+#updown-toggle {
+  display: none;
+}
+label #btn-up,
+label #btn-down {
+  position: absolute;
+  text-align: center;
+  background: #042331;
+  border-radius: 3px;
+  cursor: pointer;
+}
+label #btn-up {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+  padding: 10px 12px;
+  transition: all 0.5s;
+}
+label #btn-down {
+  z-index: 1111;
+  left: 0;
+  right: 0;
+  bottom: -75px;
+  color: #0a5275;
+  padding: 8px 10px;
+  transition: all 0.5s ease;
+}
+#updown-toggle:checked ~ #footerbar {
+  bottom: 0;
+}
+#updown-toggle:checked ~ label #btn-up {
+  bottom: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+#updown-toggle:checked ~ label #btn-down {
+  bottom: 500px;
+}
+#updown-toggle:checked ~ section {
+  margin-left: 250px;
+}
