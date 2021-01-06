@@ -1,0 +1,9 @@
+#preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 250px;
+  color: white;
+  background: #333;
+}
