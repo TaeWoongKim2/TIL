@@ -6,9 +6,11 @@
   list-style: none;
   text-decoration: none;
 }
+
 body {
   font-family: "Roboto", sans-serif;
 }
+
 #sidebar {
   position: fixed;
   left: -250px;
@@ -64,7 +66,7 @@ label #btn {
 }
 label #cancel {
   z-index: 1111;
-  left: -195px;
+  left: -75px;
   top: 18px;
   color: #0a5275;
   padding: 8px 10px;
@@ -79,7 +81,7 @@ label #cancel {
   pointer-events: none;
 }
 #check:checked ~ label #cancel {
-  left: 195px;
+  left: 275px;
 }
 #check:checked ~ section {
   margin-left: 250px;
