@@ -67,3 +67,38 @@ alert( user?.address?.zipcode );
     비교적 최신 문법이기 때문에 구식 브라우저는 지원하지 않는다.
     특히, IE는 악이다...
 
+
+<br />
+
+### 옵셔널 체이닝 응용해 보자!
+
+옵셔널 체이닝은 연산자가 아니다. `?.`은 **함수나 대괄호와 함께 동작하는 특별한 문법 구조체(syntax construct)**로 함수 관련 예시와 함께 존재 여부가 확실치 않은 함수를 호출할 때도 사용할 수 있다. `?.()`와 `?.[]`에 대한 사용 예제를 만들어보자.
+
+```jsx
+let car1 = {
+	name: 'moring',
+  accelerator() {
+    console.log("달린다");
+  },
+	brake() {
+    console.log("멈춘다");
+	},
+}
+
+let car2 = {};
+
+car1.accelerator?.(); // 달린다
+car2.accelerator?.(); // undefined
+
+alert( car1?.['name'] ); // moring
+alert( car2?.['name'] ); // undefined
+
+alert( car1?.['name']?.something?.existing); // undefined
+```
+
+`?.`은 delete와 조합해 사용할 수도 있습니다.
+
+```jsx
+delete car1?.brake; // car1가 존재하면, car1.accelerator 삭제
+console.log(car1); // {accelerator: ƒ}, 멈출 추 없는 차가 된다.
+```
