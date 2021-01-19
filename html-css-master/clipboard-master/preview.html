@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>Preview</title>
+    <style type="text/css">
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      button {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      async function copy() {
+        console.log('Click!!');
+        const image = await fetch('./img/js.png');
+        const blob = await image.blob();
+        const item = new ClipboardItem({
+          'image/png': blob
+        });
+        await navigator.clipboard.write([item]);
+        console.log('Copied!');
+      }
+    </script>
+    <img src="./img/js.png" alt="javascript" width="500" height="500">
+    <button type="button" onclick="copy()">복사하기</button>
+  </body>
+</html>
