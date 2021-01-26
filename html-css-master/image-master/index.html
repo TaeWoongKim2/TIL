@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>Image preview</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Image preview</h1>
+    </header>
+    <main><!-- 신문 관련 페이지라면, -->
+      <input type='file' id="imgInput" />
+      <img id="image_section" src="#" alt="your image" style="width: 400px;" />
+    </main>
+    <script>
+      function showImagePreview(input) {
+        if (input.files?.[0]) {
+          var reader = new FileReader();
+          
+          reader.onload = function (e) {
+            const privewImage = document.querySelector('#image_section');
+            privewImage.setAttribute('src', e.target.result);  
+          }
+          
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+        
+      // 이벤트를 바인딩해서 input에 파일이 올라올때 위의 함수를 this context로 실행합니다.
+      const uploadImage = document.querySelector('#imgInput');
+      uploadImage.addEventListener('change', function() {
+        console.log(this);
+        showImagePreview(this);
+      });
+    </script>
+  </body>
+</html>
