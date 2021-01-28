@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>Div Layer Master</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/html2canvas.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Div Layer Master</h1>
+    </header>
+    <main id="capture" style="display: none;"><!-- 신문 관련 페이지라면, -->
+      <div id="imageLayer"></div>
+      <div id="backgroundLayer"></div>
+      <div id="textLayer">Google에 대해서</div>
+    </main>
+    <footer>
+      <button type="button" onclick="convert2Canvas()">캔버스</button>
+    </footer>
+    <script>
+      function convert2Canvas() {
+        console.log('Converting...');
+        html2canvas(document.querySelector("#capture")).then(canvas => {
+            document.body.appendChild(canvas);
+        });
+      }
+    </script>
+  </body>
+</html>

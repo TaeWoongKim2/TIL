@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+}
+
+main,
+div {
+  width: 300px;
+  height: 300px;
+}
+
+#imageLayer,
+#backgroundLayer,
+#textLayer {
+  position: absolute;
+  left: 0px;
+}
+#imageLayer {
+  background: url(./google.png);
+  background-size: cover;
+}
+#backgroundLayer { 
+  background-color: #00000088;
+}
+#textLayer { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  font-weight: 600;
+  color: #FFF;
+}
