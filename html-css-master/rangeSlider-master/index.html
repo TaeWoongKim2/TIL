@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sider Bar Master</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/updownSidebar.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+    <script>
+      function handleChange(e, slider) {
+        const value = e.target.value;
+        slider.nextElementSibling.innerText = value;
+      }
+    </script>
+    <div class="slider">
+      <input type="range" id="input-left" min="1" max="100" value="50" onchange="handleChange(event, this)" />
+      <span>50</span>
+    </div>
+  </body>
+</html>

@@ -1,7 +1,7 @@
-## Clipboard API 연습
+## Canvas 연습
 
-이미지를 클립보드로 저장하는 부분 구현!
-(※ 텍스트도 할 수 있음)
+HTML Canvas API를 연습해보는 공간!
+> 그리고 지우고 수정하고, 어렵다 어려워...
 
 [참고]
-- https://web.dev/async-clipboard/
+- MDN, "Canvas API"

@@ -1,7 +1,7 @@
-## Clipboard API 연습
+## Div Layers 연습
 
-이미지를 클립보드로 저장하는 부분 구현!
-(※ 텍스트도 할 수 있음)
+Div를 겹쳐서 포토샵의 layers 처럼 만들어보는 연습!
+(※ 토이 프로젝트에 필요한 내용)
 
 [참고]
-- https://web.dev/async-clipboard/
+- MDN "CSS - position: absolute"
