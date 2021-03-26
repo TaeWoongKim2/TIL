@@ -1,27 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-import { fabric } from 'fabric';
+import 'fabric-webpack';
 
-const App = () => {
-  const [canvas, setCanvas] = useState('');
+import DesignCanvas from './DesignCanvas';
+import Image from './Image';
+import Rect from './Rect';
+import Circle from './Circle';
 
-  useEffect(() => {
-    setCanvas(initCanvas());
-  }, []);
+const App = () => (
+  <div>
+    <DesignCanvas>
+      <Image url="https://http.cat/100" scale={0.2} top={100} />
+      <Rect width={100} height={100} fill="blue" />
+      <Circle radius={50} top={200} />
+    </DesignCanvas>
+  </div>
+);
 
-  const initCanvas = () => (
-    new fabric.Canvas('canvas', {
-      height: 300,
-      width: 300,
-      backgroundColor: 'pink'
-    })
-  );
-
-  return(
-    <div>
-      <h1>Fabric.js on React - fabric.Canvas('...')</h1>
-      <canvas id="canvas" />
-    </div>
-  );
-}
 export default App;
