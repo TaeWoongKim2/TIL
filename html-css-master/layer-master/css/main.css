@@ -16,7 +16,8 @@ div {
 }
 #imageLayer {
   background: url(./google.png);
-  background-size: cover;
+  background-position: center;
+  background-size: unset;
 }
 #backgroundLayer { 
   background-color: #00000088;
